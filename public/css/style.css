@@ -1,0 +1,58 @@
+
+
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+    margin-bottom: 10px;
+}
+
+.topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.center-fit {
+    width: 100%;
+    height: 400px;
+}
+
+.text-center {
+    text-align: center !important
+}
+
+.produk {
+    margin: 0 5%;
+    display: flex;
+    flex-flow: row;
+    text-align: center;
+    justify-content: space-between;
+}
+
+.produk img {
+    width: 250px;
+    height: 180px;
+}
+
+.perkenalan {
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 10%;
+    margin-top: 10%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.subscribe {
+    margin: 0  5%;
+    padding:1% 2%;    
+    background-color: gray;
+}
+
+
+
+
+
