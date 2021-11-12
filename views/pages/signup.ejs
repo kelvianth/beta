@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register || Belanja Online</title>
+    <link rel="stylesheet" href="/css/register.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+      a {
+        text-decoration: none !important;
+      }
+    </style>
+  </head>
+  <body>
+    <%- include('../layouts/navbar.ejs'); %>
+    <div class="container" style="margin: 10% 5%">
+      <div class="row justify-content-center">
+        <div class="col-md-5">
+          <div class="card">
+            <h2 class="card-title text-center">Register</h2>
+            <div class="card-body py-md-4">
+              <form method="post" action="/user/register">
+                <div class="form-group">
+                  <input type="text" class="form-control" name="name" id="name" placeholder="Name" />
+                </div>
+                <div class="form-group">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Email" />
+                </div>
+                <div class="form-group">
+                  <input type="password" class="form-control" name="password" id="password" placeholder="Password" />
+                </div>
+                <div class="form-group">
+                  <input type="password" class="form-control" name="password_" id="confirm-password" placeholder="Confirm Password" />
+                </div>
+                <% if (locals.error) { %>
+                <span class="text-danger pl-2" style="font-size: 2.2vh"><%= error %></span>
+                <% } %>
+                <div class="d-flex flex-row align-items-center justify-content-between">
+                  <button class="btn btn-primary" type="submit">Create Account</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <%- include('../layouts/footer.ejs'); %>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script>
+      feather.replace();
+    </script>
+  </body>
+</html>
