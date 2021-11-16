@@ -31,7 +31,6 @@ mongoose.connect(('mongodb+srv://root:dhyD9SDOsTVc2JcY@cluster0.imabx.mongodb.ne
                  })
 
 
-
 const indexRouter = require('./routes/index');
 const userRouter = require('./routes/user');
 const wishRouter = require('./routes/wish');
@@ -42,8 +41,8 @@ app.use('/user', userRouter);
 app.use('/wishlist', wishRouter);
 app.use('/cart', cartRouter);
 
-  
-app.listen('3000', () => {
+const port = process.env.PORT || 3000
+app.listen(port, () => {
     console.log('Server sudah berjalan')
     //console.log(__dirname)
 })

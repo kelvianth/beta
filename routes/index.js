@@ -21,6 +21,7 @@ router.get('/allproducts', async (req, res) => {
 router.get('/add-to-wish/:id', (req, res) => {
    const productId = req.params.id;
    const wish = new Wish(req.session.wish ? req.session.wish : {});
+  //iternary operator
 
    Product.findById(productId, function(err, product) {
        if (err) {
@@ -28,7 +29,7 @@ router.get('/add-to-wish/:id', (req, res) => {
        }
        wish.add(product, product.id);
        req.session.wish = wish;
-       //console.log(req.session.wish);
+       console.log(req.session.wish);
        res.redirect('/allproducts');
    });
 });

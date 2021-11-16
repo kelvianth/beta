@@ -9,8 +9,17 @@ router.get('/', function(req, res, next) {
         return res.render('pages/cart', { products: 0 });
     }
     var cart = new Cart(req.session.cart);
+    console.log(cart.generateArray());
     res.render('pages/cart', { products: cart.generateArray(), totalPrice: cart.totalPrice });
 });
+
+
+
+
+
+
+
+
 
 router.get('/remove/:id', (req, res, next) => {
     const productId = req.params.id;

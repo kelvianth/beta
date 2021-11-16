@@ -10,9 +10,11 @@ router.get('/', async(req, res) => {
         return res.render('pages/Wishlist', { products: 0});
     }
     var wish = new Wish(req.session.wish);
-    console.log(wish);
+    console.log(wish.generateArray());
     res.render('pages/Wishlist', { products: wish.generateArray() });
 })
+
+
 
 router.get('/remove-w/:id', (req, res, next) => {
     const productId = req.params.id;
